@@ -1,14 +1,8 @@
 import React from "react";
-import sort, { byWeightAscending } from "./sort";
+import sort, { byWeightAscending, byWeightDescending } from "./sort";
 
-export default function looper() {
-  const data = [
-    { name: "Beans", weight: 200, description: "big boi" },
-    { name: "Fluffer", weight: 100, description: "smol" },
-    { name: "Norman", weight: 300, description: "Oh Lawd" }
-  ];
-
-  const sortedData = byWeightAscending(data);
+export default function looper(props) {
+    const sortedData = byWeightAscending(props.data);
   return (
     //console.log(sortedData)  
     <ol>
